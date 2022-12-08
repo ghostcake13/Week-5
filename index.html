@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="src/styles.css" />
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="weather-app">
+        <form class="search-form" id="search-form">
+            <div class="row">
+                <div class="col-6">
+            <input type="search" 
+            placeholder="Type a city..." 
+            autocomplete="off" 
+            autofocus="on" 
+            id="city-input"
+            class="form-control shadow-sm " />
+            </div>
+
+            <div class="col-3">
+            <input 
+            type="submit" 
+            value="search"  c
+            class="form-control btn btn-primary shadow-sm" 
+            id="search-btn" />
+            </div>
+
+    
+        <div class="col-3">
+          <button 
+          class="btn btn-success w-100" 
+          id="current-location-button">
+          Current
+        </button>
+      </div>
+            </div></form>
+  
+        </form>
+          <h1 id="city"></h1>
+
+    <ul>
+      <li id="date"></li>
+      <li id="description" ></li>
+
+    </ul>
+      <div class="row">
+        <div class="col-6">
+    
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+            alt="cloudy icon"
+            class="weather-icon float-left"
+          />
+         <span id= "temperature" class="temperature"> 
+            
+        </span>
+            <a href="#" id="°f">  °F <a></a>| <a href="#" id="°c">°C</a>
+        
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>Precipitation: <span class="precipitation" id="precipitation">2%</span></li>
+            <li>Humidity: <span class="humidity" id="humidity"></span>%</li>
+            <li>Wind: <span class="wind" id="wind"></span> kph</li>
+          </ul>
+    
+        </div>
+      </div>
+      </div>
+    </ul>
+        <script src="src/index.js"></script>
+  </body>
+</html>
